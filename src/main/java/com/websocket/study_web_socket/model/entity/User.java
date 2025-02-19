@@ -8,9 +8,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.UuidGenerator;
-
-import java.util.UUID;
 
 @Getter
 @Setter
@@ -21,7 +18,7 @@ import java.util.UUID;
 public class User {
 
     @Id
-    private String uuid;
+    private String id;
 
     @Column(unique = true, nullable = false)
     private String username;

@@ -8,8 +8,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.Collections;
-import java.util.List;
-import java.util.UUID;
 
 @AllArgsConstructor
 public class CustomUserDetails implements UserDetails {
@@ -23,7 +21,7 @@ public class CustomUserDetails implements UserDetails {
         // Ví dụ: tất cả user đều có ROLE_USER. Nếu có roles, chuyển đổi chúng thành GrantedAuthority
         SimpleGrantedAuthority authority = new SimpleGrantedAuthority("ROLE_USER");
         return new CustomUserDetails(
-                user.getUuid(),
+                user.getId(),
                 user.getUsername(),
                 user.getPassword(),
                 Collections.singletonList(authority)

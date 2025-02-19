@@ -1,5 +1,6 @@
 package com.websocket.study_web_socket.model.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -28,4 +29,6 @@ public class ChatMessage {
     private String receiver;
     private String content;
     private LocalDateTime timestamp;
+    private String fileUrl;
+    private String fileType;
 }

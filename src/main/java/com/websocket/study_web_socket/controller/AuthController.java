@@ -49,7 +49,7 @@ public class AuthController {
         String encodedPassword = passwordEncoder.encode(loginRequest.getPassword());
 
         User user = new User();
-        user.setUuid(UUID.randomUUID().toString());
+        user.setId(UUID.randomUUID().toString());
         user.setUsername(loginRequest.getUsername());
         user.setPassword(encodedPassword);
 
